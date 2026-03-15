@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f1c2e, #1b2a41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.card {
+   width: 430px;
+    padding: 50px 45px;
+    border-radius: 18px;
+    background: #16263d;
+    border: 1px solid #c6a96b;
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.6),
+        inset 0 0 25px rgba(198,169,107,0.08); /* inner glow */
+    color: #f5f2eb;
+    position: relative;
+}
+/* Avatar viền vàng đôi */
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+    border: 3px solid #16263d; /* lớp trong */
+    box-shadow:
+        0 0 0 3px #c6a96b,   /* viền vàng thứ nhất */
+        0 0 0 6px #16263d,   /* lớp xanh đệm */
+        0 0 0 9px #c6a96b;   /* viền vàng ngoài */
+}
+
+/* Decorative gold line */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #c6a96b, #e8d8b0, #c6a96b);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+/* Title */
+.card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #e8d8b0;
+}
+
+/* Inputs */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0 20px;
+    border-radius: 10px;
+    border: 1px solid #2f3e55;
+    background: #1f324f;
+    color: #f5f2eb;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #c6a96b;
+    box-shadow: 0 0 8px rgba(198,169,107,0.4);
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1px solid #c6a96b;
+    background: transparent;
+    color: #e6c88a;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #c6a96b;
+    color: #16263d;
+    box-shadow: 0 0 15px rgba(198,169,107,0.6);
+}
+
+/* Error */
+.error {
+    background: #3b1f1f;
+    color: #f5b7b1;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Success */
+.success {
+    background: #1f3b2f;
+    color: #a9dfbf;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #e8d8b0;
+    text-decoration: none;
+    font-style: italic;
+}
+
+a:hover {
+    color: #c6a96b;
+}
